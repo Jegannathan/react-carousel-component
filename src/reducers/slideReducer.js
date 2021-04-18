@@ -1,18 +1,28 @@
-import {slides} from '../constants/constant';
+
 
 const slidesReducer = (state, event) => {
-    if (event.type === "NEXT") {
-      return {
-        ...state,
-        slideIndex: (state.slideIndex + 1) % slides.length
-      };
-    }
-    if (event.type === "PREV") {
-      return {
-        ...state,
-        slideIndex:
-          state.slideIndex === 0 ? slides.length - 1 : state.slideIndex - 1
-      };
+    switch (event.type) {
+        case "NEXT": 
+            return {
+                ...state,
+                slideIndex: (state.slideIndex + 1) % event.value.length
+            };
+        case "PREV":
+            return {
+                ...state,
+                slideIndex: (state.slideIndex + 1) % event.value.length
+            };
+        case "OPTION_CHANGED":
+            return {
+                ...state,
+                slideIndex: 0
+            }
+        default: 
+            return {
+                ...state,
+                slideIndex: 0
+            } 
+        
     }
 };
 
