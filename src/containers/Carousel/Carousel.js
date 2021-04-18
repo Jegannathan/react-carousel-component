@@ -2,7 +2,7 @@ import {useReducer, useState} from 'react';
 import Button from '../../components/Button/Button';
 import DropDown from '../../components/DropDown/DropDown';
 import Slides from '../../components/Slides/Slides';
-import classes from './Carousal.module.css';
+import classes from './Carousel.module.css';
 import slideReducer from '../../reducers/slideReducer';
 import {slides, options}  from '../../constants/constant';
 
