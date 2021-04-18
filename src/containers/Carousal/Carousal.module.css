@@ -1,0 +1,43 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    position: relative;
+}
+.Container {
+    display: flex;
+    flex-direction: column;
+}
+.SlideParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Slides {
+    display: grid;
+    padding: 1rem;
+}
+.Slides > .SlideButton {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: white;
+    position: absolute;
+    font-size: 5rem;
+    width: 5rem;
+    height: 5rem;
+    top: 30%;
+    transition: opacity 0.3s;
+    opacity: 0.7;
+    z-index: 5;
+}
+.Slides > .SlideButton:hover {
+    opacity: 1;
+}
+.Slides > .SlideButton:focus {
+    outline: none;
+}
+.Slides > .SlideButton:first-child {
+    left: -5rem;
+}
+.Slides > .SlideButton:last-child {
+    right: -5rem;
+}

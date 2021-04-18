@@ -1,0 +1,11 @@
+.DropDown {
+    height: 2.4rem;
+    top: 1rem;
+}
+.DropDownSelect {
+    width:95%;
+    height: 100%;
+    background-color: black;
+    color:white;
+    border:none;
+}

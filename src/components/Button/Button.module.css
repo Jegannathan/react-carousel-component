@@ -1,0 +1,26 @@
+.SlideButton {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: white;
+    position: absolute;
+    font-size: 5rem;
+    width: 5rem;
+    height: 5rem;
+    top: 30%;
+    transition: opacity 0.3s;
+    opacity: 0.7;
+    z-index: 5;
+}
+.SlideButton:hover {
+    opacity: 1;
+}
+.SlideButton:focus {
+    outline: none;
+}
+.SlideButton:first-child {
+    left: -5rem;
+}
+.SlideButton:last-child {
+    right: -5rem;
+}
